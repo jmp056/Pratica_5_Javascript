@@ -1,3 +1,3 @@
 Nombre: Jonathan Maria Parra
 Concepto: Practica 5 JavaScript
-Link del repositorio: https://github.com/jmp056/Practica_5_Javascript
+Link del repositorio: https://github.com/jmp056/Pratica_5_Javascript
