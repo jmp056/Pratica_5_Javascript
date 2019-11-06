@@ -7,27 +7,44 @@
         <link href="CSS/MisEstilos.css" rel="stylesheet" type="text/css"/>
         <title>Loteria</title>
     </head>
-    <body>
-        <h1>Numeros a jugar</h1>
-        <h3>1er Numero a jugar</h3>
-        <input type="number" id="PrimerNumero" placeholder="Digite un numero"  min="0" max="99">
-        <h3>2do Numero a jugar</h3>
-        <input type="number" id="SegundoNumero" placeholder="Digite un numero"  min="0" max="99">
-        <h3>3er Numero a jugar</h3>
-        <input type="number" id="TercerNumero" placeholder="Digite un numero"  min="0" max="99">
-        <h1>Numeros Ganadores</h1>
-        <h3>1er numero ganador</h3>
-        <h4 id="PrimerPremio">1er</h4>
-        <h3>2do numero ganador</h3>
-        <h4 id="SegundoPremio"></h4>
-        <h3>3er numero ganador</h3>
-        <h4 id="TercerPremio"></h4>
-        <br>
-        <button id="Sortear" type="button">Sortear</button>
+    <body>        
+        <div class="Centralizar">
+            <div> <!--Division del los numeros a jugar-->
+                <h1>Numeros a jugar</h1>
+                <h3>1er Numero a jugar</h3>
+                <input type="number" id="PrimerNumero" placeholder="Digite un numero"  min="0" max="99">
+                <h3>2do Numero a jugar</h3>
+                <input type="number" id="SegundoNumero" placeholder="Digite un numero"  min="0" max="99">
+                <h3>3er Numero a jugar</h3>
+                <input type="number" id="TercerNumero" placeholder="Digite un numero"  min="0" max="99">
+                <br>
+                <button id="Sortear" type="button" onclick="Sortear()">Sortear</button>
+            </div>
+
+            <div> <!--Division de los numeros ganadores-->
+                <h1>Numeros Ganadores</h1>
+                <h3>1er numero ganador</h3>
+                <h4 id="PrimerPremio"></h4>
+                <h3>2do numero ganador</h3>
+                <h4 id="SegundoPremio"></h4>
+                <h3>3er numero ganador</h3>
+                <h4 id="TercerPremio"></h4>
+                <br>
+            </div>
+
+            <div> <!--Division de los resultados-->
+
+            </div>
+
+        </div>
     </body>
+
     <script>
+        function Sortear() {
             document.getElementById("PrimerPremio").innerText = Math.floor(Math.random()*100);
             document.getElementById("SegundoPremio").innerText = Math.floor(Math.random()*100);
             document.getElementById("TercerPremio").innerText = Math.floor(Math.random()*100);
+        }
+
     </script>
 </html>
