@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="CSS/MisEstilos.css" rel="stylesheet" type="text/css"/>
-    <title>Loteria</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="CSS/MisEstilos.css" rel="stylesheet" type="text/css"/>
+        <title>Loteria</title>
+    </head>
+    <body>
+        <h1>Numeros a jugar</h1>
+        <h3>1er Numero a jugar</h3>
+        <input type="number" id="PrimerNumero" placeholder="Digite un numero"  min="0" max="99">
+        <h3>2do Numero a jugar</h3>
+        <input type="number" id="SegundoNumero" placeholder="Digite un numero"  min="0" max="99">
+        <h3>3er Numero a jugar</h3>
+        <input type="number" id="TercerNumero" placeholder="Digite un numero"  min="0" max="99">
+        <h1>Numeros Ganadores</h1>
+        <h3>1er numero ganador</h3>
+        <h4 id="PrimerPremio">1er</h4>
+        <h3>2do numero ganador</h3>
+        <h4 id="SegundoPremio"></h4>
+        <h3>3er numero ganador</h3>
+        <h4 id="TercerPremio"></h4>
+        <br>
+        <button id="Sortear" type="button">Sortear</button>
+    </body>
+    <script>
+            document.getElementById("PrimerPremio").innerText = Math.floor(Math.random()*100);
+            document.getElementById("SegundoPremio").innerText = Math.floor(Math.random()*100);
+            document.getElementById("TercerPremio").innerText = Math.floor(Math.random()*100);
+    </script>
 </html>
