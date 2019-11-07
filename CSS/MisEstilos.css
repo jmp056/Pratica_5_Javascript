@@ -1,4 +1,29 @@
+#Sortear{
+    font-size: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
 .Centralizar{
     margin: 0 auto;
     width: 900px;
+}
+
+div div{
+    width: 800px;
+    height: 230px;
+    background-color: blueviolet;
+}
+
+div div div{
+    width: 240px;
+    height: 90px;
+    float: left;
+    text-align: center;
+    background-color: burlywood;
+    margin: 13px;
+}
+
+h1{
+    text-align: center;
 }
