@@ -7,8 +7,11 @@
         <link href="CSS/MisEstilos.css" rel="stylesheet" type="text/css"/>
         <title>Loteria</title>
     </head>
-    <body>        
+    <body style="background-color: burlywood;">        
         <div class="Centralizar">
+            <div id="Logo">
+                <img src="Imgs/Principal.jpg">
+            </div>
             <div> <!--Division del los numeros a jugar-->
                 <h1>Numeros a jugar</h1>
                 <div>
@@ -41,10 +44,9 @@
                     <h4 id="TercerPremio"></h4>
                 </div>
             </div>
-            <div style="height: 70px;"> <!--Division de los resultados-->
+            <div style="height: 70px;" > <!--Division de los resultados-->
                 <p id="Resultado"></p>
             </div>
-
         </div>
     </body>
 
@@ -65,13 +67,13 @@
             document.getElementById("TercerPremio").innerText = resultado3;
 
             if(resultado1 == numero1 || resultado1 == numero2 || resultado1 == numero3)
-                document.getElementById("Resultado").innerText = "Usted gano en PRIMERA";
+                document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en PRIMERA";
             else if(resultado2 == numero1 || resultado2 == numero2 || resultado2 == numero3)
-                document.getElementById("Resultado").innerText = "Usted gano en SEGUNDA";
+                document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en SEGUNDA";
             else if(resultado3 == numero1 || resultado3 == numero2 || resultado3 == numero3)
-                document.getElementById("Resultado").innerText = "Usted gano en TERCERA";
+                document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en TERCERA";
             else
-                document.getElementById("Resultado").innerText = "Usted no a ganado ningun premio!";
+                document.getElementById("Resultado").innerText = "¡Lo siento! Usted no a ganado ningun premio";
         }
     </script>
 </html>
