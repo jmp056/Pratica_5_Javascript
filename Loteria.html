@@ -26,7 +26,7 @@
                     <h3>3er Numero a jugar</h3>
                     <input type="number" id="TercerNumero" placeholder="Digite un numero"  min="0" max="99">
                 </div>
-                <button id="Sortear" type="button" onclick="Sortear()">Sortear</button>
+                <button id="Sortear" type="button" onclick="Juego()">Sortear</button>
             </div>
 
             <div style="height: 200px;">  <!--Division de los numeros ganadores-->
@@ -51,6 +51,28 @@
     </body>
 
     <script>
+        function Juego() {
+            if(Validar() == true)
+                Sortear();
+        }
+
+        function Validar() { //Funcion para validar
+            if(document.getElementById("PrimerNumero").value == "" || //Valida que no hayan numeros a jugar vacios
+            document.getElementById("SegundoNumero").value == "" ||
+            document.getElementById("TercerNumero").value == ""){
+                alert("No puede dejar numeros vacios!");
+                return false;
+            }
+            else if(document.getElementById("PrimerNumero").value < 0 || document.getElementById("PrimerNumero").value > 99 || //Valida que no hayan numeros menores a 0 o mayores a 99            document.getElementById("SegundoNumero").value == "" ||
+            document.getElementById("SegundoNumero").value < 0 || document.getElementById("SegundoNumero").value > 99 || 
+            document.getElementById("TercerNumero").value < 0 || document.getElementById("TercerNumero").value > 99){
+                alert("Los numeros deben estar comprendidos entre 0 & 99");
+                return false;
+            }  
+            else
+                return true;    
+        }
+
         function Sortear() {
             var numero1 = parseInt(document.getElementById("PrimerNumero").value); 
             var numero2 = parseInt(document.getElementById("SegundoNumero").value); 
