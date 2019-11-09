@@ -44,7 +44,7 @@
                     <h4 id="TercerPremio"></h4>
                 </div>
             </div>
-            <div style="height: 70px;" > <!--Division de los resultados-->
+            <div id="Res" style="height: 70px;"> <!--Division de los resultados-->
                 <p id="Resultado"></p>
             </div>
         </div>
@@ -87,22 +87,31 @@
             document.getElementById("Resultado").innerText = numero2;
             document.getElementById("Resultado").innerText = numero3;
            
-            var resultado1 = parseInt(Math.floor(Math.random()*3));
-            var resultado2 = parseInt(Math.floor(Math.random()*3));
-            var resultado3 = parseInt(Math.floor(Math.random()*3));
+            var resultado1 = parseInt(Math.floor(Math.random()*100));
+            var resultado2 = parseInt(Math.floor(Math.random()*100));
+            var resultado3 = parseInt(Math.floor(Math.random()*100));
             document.getElementById("PrimerPremio").innerText = resultado1;
             document.getElementById("SegundoPremio").innerText = resultado2;
             document.getElementById("TercerPremio").innerText = resultado3;
 
-            if(resultado1 == numero1 || resultado1 == numero2 || resultado1 == numero3)
-                document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en PRIMERA";
-            else if(resultado2 == numero1 || resultado2 == numero2 || resultado2 == numero3)
+            if(resultado1 == numero1 || resultado1 == numero2 || resultado1 == numero3){
+                document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en PRIMERA"; 
+                document.getElementById("Res").style.backgroundImage = "url('Imgs/Confeti.gif')";               
+            }
+
+            else if(resultado2 == numero1 || resultado2 == numero2 || resultado2 == numero3){
                 document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en SEGUNDA";
-            else if(resultado3 == numero1 || resultado3 == numero2 || resultado3 == numero3)
+                document.getElementById("Res").style.backgroundImage = "url('Imgs/Confeti.gif')";
+            }
+            else if(resultado3 == numero1 || resultado3 == numero2 || resultado3 == numero3){
                 document.getElementById("Resultado").innerText = "¡FELICIDADES! Usted gano en TERCERA";
-            else
+                document.getElementById("Res").style.backgroundImage = "url('Imgs/Confeti.gif')";
+            }
+            else{
                 document.getElementById("Resultado").innerText = "¡Lo siento! Usted no a ganado ningun premio";
+                document.getElementById("Res").style.backgroundImage = "none";
+            }
         }
-        
+
     </script>
 </html>
